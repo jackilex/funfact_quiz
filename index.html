@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Pangolin&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./style.css">
+    
+    
+    <title>Document</title>
+</head>
+<body >
+<!-- add a a start
+    1) card container that will contain 
+    2a) a div with Timer, Start button Score
+    2b) secon div container with images
+    2c) 3th div container with questions
+    3) 4th div container with with divs for answere ptions A B C
+    4) div container will have feedback and questions number -->
+
+<div class="start">Ready to Test Your "Fun Fact" IQ...<br> Start!!</div>
+
+
+
+<div class="container" id="quizFile" >
+    <div class="conttwo">
+        <div class="timer"></div>
+        <div class="isItCorrect">
+            <span class='correct'><em>Correct</em></span><br>
+            <span class="incorrect"><em>Incorrect</em></span><br>            
+        </div>        
+        <div class="score"></div>
+    </div>
+
+<div class="contthree">
+    <img class="img" src="" alt="">
+    
+</div>
+<div class="contfour">
+    <div class="questions">What is your name What is your name What is your name</div>
+</div>
+<div class="contfive">
+    <div id="button" class="A"></div>
+    <div id="button" class="B"></div>
+    <div id="button" class="C"></div>
+   
+</div>
+<div class="feedback">
+    <span class='success'>&#128513;</span>
+    <div class="current"><span class='page'></span> /5</div>
+    <span class="fail">&#128542;</span>
+
+</div>
+</div>
+
+<div class="input">
+    <legend>TAG YOUR SCORE</legend>
+    <div class="yourScore" id="hideMe">
+        <div>SCORE: <span class="score"></span></div>
+    </div id='hideMe'>
+
+        <input class="textInput" type="text" placeholder="Your Name" >
+        <input class="numberInput" type="number" placeholder="Your score">
+        <button class="submit" id="submitStyle">TAG IT !!</button>
+
+    <div class="output">
+        <legend></legend>
+        <div class="outputhtml"></div>
+    </div>
+    <button class="again">Try Again?</button>
+</div>
+
+
+
+
+    
+
+    
+</body>
+<script src="quiz.js"></script>
+</html>

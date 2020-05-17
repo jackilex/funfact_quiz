@@ -134,23 +134,15 @@ let currentPage= page.html(nextPage)
             btnA.on('click',function (){            
             
                sendFeedback.goodFeedback(); 
-               runningQuestionTwo();            
-            //    setTimeout(function(){
-            //     runningQuestionTwo(); //calling question 2
-            //     // totalTime=10; //reseting timer
-            //    },1000);           
-
+               runningQuestionTwo();           
+           
             });
             //result for button B
             btnB.on('click',function (){                  
                 sendFeedback.badFeedback();
                 totalTime= totalTime - 10;
                 runningQuestionTwo();
-                // setTimeout(function(){
-                //     runningQuestionTwo();
-                //     totalTime= totaltime - 10;
-                //    },1000);
-
+                
              });
               //result for button C
              btnC.on('click',function (){

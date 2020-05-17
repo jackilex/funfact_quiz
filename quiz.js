@@ -140,14 +140,14 @@ let currentPage= page.html(nextPage)
             //result for button B
             btnB.on('click',function (){                  
                 sendFeedback.badFeedback();
-                totalTime= totalTime - 10;
+                totalTime= totalTime - 20;
                 runningQuestionTwo();
                 
              });
               //result for button C
              btnC.on('click',function (){
                 sendFeedback.badFeedback();
-                totalTime= totalTime - 10;
+                totalTime= totalTime - 20;
                 runningQuestionTwo();
  
              });
@@ -166,14 +166,14 @@ let currentPage= page.html(nextPage)
                  //result for button A
             btnA.on('click',function (){               
                 sendFeedback.badFeedback();
-                totalTime= totalTime - 10;
+                totalTime= totalTime - 20;
                 runningQuestionThree();    
 
             });
             //result for button B
             btnB.on('click',function (){                
                 sendFeedback.badFeedback();
-                totalTime= totalTime - 10;
+                totalTime= totalTime - 20;
                 runningQuestionThree();               
              });
               //result for button C
@@ -197,14 +197,14 @@ let currentPage= page.html(nextPage)
              //result for button A
         btnA.on('click',function (){               
             sendFeedback.badFeedback();
-            totalTime= totalTime - 10;
+            totalTime= totalTime - 20;
             runningQuestionFour();              
     
         });
         //result for button B
         btnB.on('click',function (){                
             sendFeedback.badFeedback();
-            totalTime= totalTime - 10;
+            totalTime= totalTime - 20;
             runningQuestionFour(); 
          });
           //result for button C
@@ -229,7 +229,7 @@ function runningQuestionFour(){
          //result for button A
     btnA.on('click',function (){               
         sendFeedback.badFeedback();
-            totalTime= totalTime - 10;
+            totalTime= totalTime - 20;
             runningQuestionFive();     
     });
     //result for button B
@@ -240,7 +240,7 @@ function runningQuestionFour(){
       //result for button C
      btnC.on('click',function (){                     
         sendFeedback.badFeedback();
-        totalTime= totalTime - 10;
+        totalTime= totalTime - 20;
         runningQuestionFive();  
      });
 }
@@ -264,13 +264,13 @@ function runningQuestionFive(){
     //result for button B
     btnB.on('click',function (){                
         sendFeedback.badFeedback();
-        totalTime= totalTime - 10;
+        totalTime= totalTime - 20;
         scenarioSix(); 
      });
       //result for button C
      btnC.on('click',function (){                     
         sendFeedback.badFeedback();
-        totalTime= totalTime - 10;
+        totalTime= totalTime - 20;
         scenarioSix(); 
      });
 }

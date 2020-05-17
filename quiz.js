@@ -37,7 +37,7 @@ quizFile.show();
 
 // create variables and setters variables
     //timer
-let totalTime=10;
+let totalTime=75;
 let startTime= 0;
 let quizTimer= setInterval(clock,1000);
   //timer
@@ -70,18 +70,11 @@ let currentPage= page.html(nextPage)
     function clock(){
         timer.html(totalTime);
         totalTime--;
-        if(totalTime<0){
-            totalTime=0;
-            nextPage++;
-            let currentPage= page.html(nextPage);
-            if(totalTime== 0){
-               runningQuestionTwo();
-               runningQuestionThree();
-               runningQuestionFour();
-               runningQuestionFive();
-               scenarioSix();
-               totalTime=10;
-             }
+        if(totalTime<0){ 
+            nextPage=6;          
+            scenarioSix();        
+
+             
         }
         
     };
@@ -140,29 +133,30 @@ let currentPage= page.html(nextPage)
                  //result for button A
             btnA.on('click',function (){            
             
-               sendFeedback.goodFeedback();             
-               setTimeout(function(){
-                runningQuestionTwo(); //calling question 2
-                totalTime=10; //reseting timer
-               },1000);           
+               sendFeedback.goodFeedback(); 
+               runningQuestionTwo();            
+            //    setTimeout(function(){
+            //     runningQuestionTwo(); //calling question 2
+            //     // totalTime=10; //reseting timer
+            //    },1000);           
 
             });
             //result for button B
             btnB.on('click',function (){                  
                 sendFeedback.badFeedback();
-                setTimeout(function(){
-                    runningQuestionTwo();
-                    totalTime=10;
-                   },1000);
+                totalTime= totalTime - 10;
+                runningQuestionTwo();
+                // setTimeout(function(){
+                //     runningQuestionTwo();
+                //     totalTime= totaltime - 10;
+                //    },1000);
 
              });
               //result for button C
              btnC.on('click',function (){
-                sendFeedback.badFeedback();            
-                setTimeout(function(){
-                    runningQuestionTwo();
-                    totalTime=10;
-                   },1000);
+                sendFeedback.badFeedback();
+                totalTime= totalTime - 10;
+                runningQuestionTwo();
  
              });
         }
@@ -179,32 +173,21 @@ let currentPage= page.html(nextPage)
             //SET MY EVENT LISTENERS for Questions 1
                  //result for button A
             btnA.on('click',function (){               
-                sendFeedback.badFeedback();          
-                setTimeout(function(){
-                    runningQuestionThree();
-                    totalTime=10;
-                   },1000);            
-
+                sendFeedback.badFeedback();
+                totalTime= totalTime - 10;
+                runningQuestionThree();    
 
             });
             //result for button B
             btnB.on('click',function (){                
-                sendFeedback.badFeedback();            
-                setTimeout(function(){
-                    runningQuestionThree();
-                    totalTime=10;
-                   },1000);                 
-
- 
+                sendFeedback.badFeedback();
+                totalTime= totalTime - 10;
+                runningQuestionThree();               
              });
               //result for button C
              btnC.on('click',function (){                     
-                sendFeedback.goodFeedback();             
-                setTimeout(function(){
-                    runningQuestionThree();
-                    totalTime=10;
-                   },1000);
- 
+                sendFeedback.goodFeedback(); 
+                runningQuestionThree();  
              });
             }
         
@@ -222,26 +205,20 @@ let currentPage= page.html(nextPage)
              //result for button A
         btnA.on('click',function (){               
             sendFeedback.badFeedback();
-           setTimeout(function(){
-            runningQuestionFour();
-            totalTime=10;
-           },1000);        
+            totalTime= totalTime - 10;
+            runningQuestionFour();              
+    
         });
         //result for button B
         btnB.on('click',function (){                
             sendFeedback.badFeedback();
-            setTimeout(function(){
-                runningQuestionFour();
-                totalTime=10;
-               },1000);
+            totalTime= totalTime - 10;
+            runningQuestionFour(); 
          });
           //result for button C
          btnC.on('click',function (){                     
             sendFeedback.goodFeedback(); 
-            setTimeout(function(){
-                runningQuestionFour();
-                totalTime=10;
-               },1000);
+            runningQuestionFour();  
          });
     }
 
@@ -260,29 +237,19 @@ function runningQuestionFour(){
          //result for button A
     btnA.on('click',function (){               
         sendFeedback.badFeedback();
-       setTimeout(function(){
-        runningQuestionFive();
-        totalTime=10;
-       },1000);        
-
-
+            totalTime= totalTime - 10;
+            runningQuestionFive();     
     });
     //result for button B
     btnB.on('click',function (){                
-        sendFeedback.goodFeedback();
-        setTimeout(function(){
-            runningQuestionFive();
-            totalTime=10;
-           },1000);
-
+        sendFeedback.goodFeedback(); 
+        runningQuestionFive();  
      });
       //result for button C
      btnC.on('click',function (){                     
-        sendFeedback.badFeedback(); 
-        setTimeout(function(){
-            runningQuestionFive();
-            totalTime=10;
-           },1000);
+        sendFeedback.badFeedback();
+        totalTime= totalTime - 10;
+        runningQuestionFive();  
      });
 }
 
@@ -299,30 +266,20 @@ function runningQuestionFive(){
     //SET MY EVENT LISTENERS for Questions 1
          //result for button A
     btnA.on('click',function (){               
-        sendFeedback.goodFeedback();
-       setTimeout(function(){
-        scenarioSix();
-        totalTime=10;
-       },1000);        
-
-
+        sendFeedback.goodFeedback(); 
+        scenarioSix();         
     });
     //result for button B
     btnB.on('click',function (){                
         sendFeedback.badFeedback();
-        setTimeout(function(){
-            scenarioSix();
-            totalTime=10;
-           },1000);
-
+        totalTime= totalTime - 10;
+        scenarioSix(); 
      });
       //result for button C
      btnC.on('click',function (){                     
-        sendFeedback.badFeedback(); 
-        setTimeout(function(){
-            scenarioSix();
-            totalTime=10;
-           },1000);
+        sendFeedback.badFeedback();
+        totalTime= totalTime - 10;
+        scenarioSix(); 
      });
 }
 
